@@ -8,3 +8,6 @@ Run in your Terminal the command: ./build.sh
 
 # Run project #
 Run in your Terminal the command: ./build/msp
+
+# Small notes #
+05 March 2020 - Develop prototypes of Matrix, Vector, VTKSaver, Config
