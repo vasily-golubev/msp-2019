@@ -1,6 +1,10 @@
 #include <iostream>
 
 #include "./core/basesaver.hpp"
+#include "./core/matrix.hpp"
+#include "./core/vector.hpp"
+
+#include "./structured/rectgrid.hpp"
 
 using namespace std;
 
@@ -23,6 +27,9 @@ int main(int argc, char *argv[])
   //BaseSaver bs1;
   //cout << bs1.getName() << endl;
   //bs1.save();
+  Matrix m1;
+  Vector v1;
+  RectGrid rg1;
   cout << "Program finished." << endl;
   return 0;
 }

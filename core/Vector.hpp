@@ -9,7 +9,7 @@
 class Vector : public BaseObject
 {
 public:
-  double vector[MAXLEN];
+  double data[MAXLEN];
 
   Vector();
   void displayVector();

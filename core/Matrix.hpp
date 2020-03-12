@@ -6,10 +6,10 @@
 // default matrix size to be used
 #define MAXLEN 3
 
-class Matrix: public BaseObject 
+class Matrix: public BaseObject
 {
   public:
-    double matrix[MAXLEN][MAXLEN];
+    double data[MAXLEN][MAXLEN];
 
     Matrix();
     void displayMatrix();
