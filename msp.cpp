@@ -30,6 +30,9 @@ int main(int argc, char *argv[])
   Matrix m1;
   Vector v1;
   RectGrid rg1;
+  rg1.setNx(10);
+  rg1.setNy(20);
+  rg1.allocateMemory();
   cout << "Program finished." << endl;
   return 0;
 }
