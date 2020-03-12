@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
   rg1.setNx(10);
   rg1.setNy(20);
   rg1.allocateMemory();
+  rg1.stepX();
   cout << "Program finished." << endl;
   return 0;
 }

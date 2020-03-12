@@ -31,7 +31,14 @@ public:
   float getDy() const { return dy; }
   unsigned long getNx() const { return nx; }
   unsigned long getNy() const { return ny; }
-  void stepX() {}
+  void stepX() {
+    for (int i = 0; i < ny; i++) {
+      for (int j = 0; j < nx; j++)
+        // Call scheme with appropriate nodes here.
+        cout << data[i][j].pressure() << " ";
+      cout << endl;
+    }
+  }
   void stepY() {}
   void setNx(unsigned long n) { nx = n; }
   void setNy(unsigned long n) { ny = n; }

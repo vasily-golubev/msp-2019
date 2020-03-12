@@ -9,6 +9,9 @@ public:
   AcousticNode() {}
   ~AcousticNode() {}
   const char *getName();
+  float pressure() {
+    return p;
+  }
 private:
   Vector v;
   float p;
