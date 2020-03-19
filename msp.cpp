@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     //solver->step();
   }
   Interpolator s1;
-  cout<<s1.liniar(10,20,5,40,80)<<endl;
+  cout<<s1.liniar(10,20,15,40,80)<<endl;
   //BaseSaver bs1;
   //cout << bs1.getName() << endl;
   //bs1.save();
