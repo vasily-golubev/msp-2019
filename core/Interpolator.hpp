@@ -1,5 +1,5 @@
-#ifndef MATRIX
-#define MATRIX
+#ifndef interpolator
+#define Interpolator
 
 class Interpolator{
 public:
