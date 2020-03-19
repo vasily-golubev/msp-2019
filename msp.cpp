@@ -3,6 +3,7 @@
 #include "./core/basesaver.hpp"
 #include "./core/matrix.hpp"
 #include "./core/vector.hpp"
+#include "./core/Interpolator.hpp"
 
 #include "./structured/rectgrid.hpp"
 
@@ -24,6 +25,8 @@ int main(int argc, char *argv[])
     //saver.save();
     //solver->step();
   }
+  Interpolator s1;
+  cout<<s1.liniar(10,20,5,40,80)<<endl;
   //BaseSaver bs1;
   //cout << bs1.getName() << endl;
   //bs1.save();
