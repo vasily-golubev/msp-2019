@@ -31,6 +31,8 @@ public:
   float getDy() const { return dy; }
   unsigned long getNx() const { return nx; }
   unsigned long getNy() const { return ny; }
+  unsigned long getOx() const { return ox; }
+  unsigned long getOy() const { return oy; }
   void stepX() {
     for (int i = 0; i < ny; i++) {
       for (int j = 0; j < nx; j++)
@@ -42,6 +44,7 @@ public:
   void stepY() {}
   void setNx(unsigned long n) { nx = n; }
   void setNy(unsigned long n) { ny = n; }
+  float getPressure(int i, int j) {return data[i][j].pressure();}
 private:
   float dx;
   float dy;
