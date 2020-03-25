@@ -2,6 +2,10 @@
 #include <iostream>
 using namespace std;
 
+
+const char *Vector::getName() {
+  return "Vector";
+}
 /**
  * @brief Construct a new Vector:: Vector object
  *

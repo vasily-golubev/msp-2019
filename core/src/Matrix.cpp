@@ -2,6 +2,11 @@
 #include <iostream>
 using namespace std;
 
+
+const char *Matrix::getName() {
+  return "Matrix";
+}
+
 /**
  * @brief Construct a new Matrix:: Matrix object
  *

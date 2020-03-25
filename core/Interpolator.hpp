@@ -1,14 +1,14 @@
 #ifndef INTERPOLATOR
 #define INTERPOLATOR
 
-class Interpolator{
-public:
-	double linear(int xl, int xr, int x0, int wl, int wr)
-	{
-		double a = (wr - wl) / (xr - xl);
-		double b = wr - a * xr;
-		return x0 * a + b;
-	}
+#include "baseobject.hpp"
+
+class Interpolator : public BaseObject
+{
+  public:
+    const char *getName();
+
+    double linear(int xl, int xr, int x0, int wl, int wr);
 };
 
-#endif // BASE_SAVER
+#endif // INTERPOLATOR

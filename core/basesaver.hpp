@@ -9,12 +9,12 @@ using namespace std;
 
 class BaseSaver : public BaseObject
 {
-public:
-  BaseSaver() {}
-  ~BaseSaver() {}
-  const char *getName();
+  public:
+    BaseSaver() {}
+    ~BaseSaver() {}
+    const char *getName();
 
-  void save() { cout << "Saving results ..." << endl; }
+    void save() { cout << "Saving results ..." << endl; }
 };
 
 #endif // BASE_SAVER

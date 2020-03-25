@@ -8,13 +8,15 @@
 
 class Vector : public BaseObject
 {
-public:
-  double data[MAXLEN];
+  public:
+    const char *getName();
 
-  Vector();
-  void displayVector();
-  void initValues(double);
-  Vector operator+(const Vector &) const;
+    double data[MAXLEN];
+
+    Vector();
+    void displayVector();
+    void initValues(double);
+    Vector operator+(const Vector &) const;
 };
 
-#endif
+#endif // VECTOR

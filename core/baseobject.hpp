@@ -3,10 +3,10 @@
 
 class BaseObject
 {
-public:
-  BaseObject() {}
-  ~BaseObject() {}
-  const char *getName();
+  public:
+    BaseObject() {}
+    ~BaseObject() {}
+    const char *getName();
 };
 
 #endif // BASE_OBJECT

@@ -5,15 +5,16 @@
 
 class AcousticNode : public BaseObject
 {
-public:
-  AcousticNode() {}
-  ~AcousticNode() {}
-  const char *getName();
-  float pressure() {
-    return p;
-  }
-private:
-  Vector v;
-  float p;
+  public:
+    AcousticNode() {}
+    ~AcousticNode() {}
+    const char *getName();
+    float pressure() {
+      return p;
+    }
+  private:
+    Vector v;
+    float p;
 };
+
 #endif // ACOUSTIC_NODE

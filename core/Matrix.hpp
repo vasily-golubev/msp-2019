@@ -9,6 +9,8 @@
 class Matrix: public BaseObject
 {
   public:
+    const char *getName();
+
     double data[MAXLEN][MAXLEN];
 
     Matrix();
@@ -17,4 +19,4 @@ class Matrix: public BaseObject
     Matrix operator+(const Matrix&) const;
 };
 
-#endif
+#endif // MATRIX
