@@ -11,6 +11,7 @@ class Saver: public BaseSaver
   public:
     const char *getName();
 
+    Saver(){};
     void save(RectGrid& grid);
 };
 

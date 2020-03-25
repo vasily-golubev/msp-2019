@@ -1,9 +1,10 @@
 #include <iostream>
 
 #include "./core/basesaver.hpp"
-#include "./core/matrix.hpp"
-#include "./core/vector.hpp"
-#include "./core/interpolator.hpp"
+#include "./core/Matrix.hpp"
+#include "./core/Vector.hpp"
+#include "./core/Interpolator.hpp"
+#include "./core/Saver.hpp"
 
 #include "./structured/rectgrid.hpp"
 
@@ -32,11 +33,22 @@ int main(int argc, char *argv[])
   //bs1.save();
   Matrix m1;
   Vector v1;
+
+  // SAVING TEST
   RectGrid rg1;
-  rg1.setNx(10);
-  rg1.setNy(20);
+  rg1.setNx(1000);
+  rg1.setNy(1000);
+  rg1.setDx(1);
+  rg1.setDy(1);
   rg1.allocateMemory();
-  rg1.stepX();
+  for(int i = 0; i < rg1.getNy(); i++){
+      for(int j = 0; j < rg1.getNx(); j++){
+          rg1.setPressure(i, j, (500-i)*(500-j) );
+      }
+  }
+  Saver saver_rg;
+  saver_rg.save(rg1);
+
   cout << "Program finished." << endl;
   return 0;
 }

@@ -6,11 +6,17 @@
 class AcousticNode : public BaseObject
 {
   public:
-    AcousticNode() {}
+    AcousticNode()
+    {
+        p = 0;
+    }
     ~AcousticNode() {}
     const char *getName();
     float pressure() {
       return p;
+    }
+    void setPressure(float p){
+        this->p = p;
     }
   private:
     Vector v;

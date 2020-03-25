@@ -5,6 +5,7 @@ const char *Saver::getName() {
   return "Saver";
 }
 
+
 void Saver::save(RectGrid& grid)
 {
     ofstream out;
@@ -14,9 +15,9 @@ void Saver::save(RectGrid& grid)
     out << "Created by Saver::save()" << endl;
     out << "ASCII" << endl;
     out << "DATASET STRUCTURED_POINTS" << endl;
-    out << "DIMENSIONS " << grid.getNx() << " " << grid.getNy() << "1" << endl;
-    out << "SPACING " << grid.getDx() << " " << grid.getDy() << "0" << endl;
-    out << "ORIGIN " << grid.getOx() << " " << grid.getOy() << "0" << endl;
+    out << "DIMENSIONS " << grid.getNx() << " " << grid.getNy() << ' ' << "1" << endl;
+    out << "SPACING " << grid.getDx() << " " << grid.getDy() << ' ' << "0" << endl;
+    out << "ORIGIN " << grid.getOx() << " " << grid.getOy() << ' ' << "0" << endl;
     out << "POINT_DATA " << grid.getNx() * grid.getNy() << endl;
     out << "SCALARS p float" << endl;
     out << "LOOKUP_TABLE p_table" << endl;
@@ -30,4 +31,6 @@ void Saver::save(RectGrid& grid)
     }
     out << "METADATA" << endl;
     out << "INFORMATION 0" << endl;
+    out.close();
+    cout << "Successfully" << endl;
 }

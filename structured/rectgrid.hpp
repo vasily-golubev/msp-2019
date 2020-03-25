@@ -44,7 +44,10 @@ public:
   void stepY() {}
   void setNx(unsigned long n) { nx = n; }
   void setNy(unsigned long n) { ny = n; }
+  void setDx(float x) { dx = x; }
+  void setDy(float y) { dy = y; }
   float getPressure(int i, int j) {return data[i][j].pressure();}
+  void setPressure(int i, int j, float p) { data[i][j].setPressure(p); }
 private:
   float dx;
   float dy;
