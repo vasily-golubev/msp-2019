@@ -5,6 +5,13 @@
 #include "./core/omega.hpp"
 #include "./core/vector.hpp"
 #include "./core/interpolator.hpp"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+#include "./core/saver.hpp"
+>>>>>>> 39486ad95f350c658cb733a95e22b7695d6c3173
+>>>>>>> 0596649f0839a86404b43ba171e413c0e7d70ee3
 
 #include "./structured/saver.hpp"
 #include "./structured/rectgrid.hpp"
