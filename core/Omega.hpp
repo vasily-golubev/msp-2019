@@ -2,7 +2,7 @@
 #define OMEGA
 
 #include "baseobject.hpp"
-#include "Matrix.hpp"
+#include "matrix.hpp"
 
 // default matrix size to be used
 #define MAXLEN 3
