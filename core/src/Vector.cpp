@@ -1,4 +1,4 @@
-#include "../Vector.hpp"
+#include "../vector.hpp"
 #include <iostream>
 using namespace std;
 
@@ -53,7 +53,7 @@ Vector Vector::operator+(const Vector &v2) const
 }
 
 ostream &operator<<(ostream &os, const Vector &m) {
-  for (int i = 0; i < MAXLEN; i++) 
+  for (int i = 0; i < MAXLEN; i++)
     os << m.data[i] << " ";
   os << endl;
   return os;

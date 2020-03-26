@@ -3,7 +3,7 @@
 
 #include "baseobject.hpp"
 #include <iostream>
-#include "Vector.hpp"
+#include "vector.hpp"
 using namespace std;
 
 // default matrix size to be used
