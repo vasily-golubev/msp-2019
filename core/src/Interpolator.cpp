@@ -1,4 +1,4 @@
-#include "../Interpolator.hpp"
+#include "../interpolator.hpp"
 
 const char *Interpolator::getName() {
   return "Interpolator";

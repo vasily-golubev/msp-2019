@@ -1,11 +1,11 @@
 #include <iostream>
 
 #include "./core/basesaver.hpp"
-#include "./core/Matrix.hpp"
-#include "./core/Omega.hpp"
-#include "./core/Vector.hpp"
-#include "./core/Interpolator.hpp"
-#include "./core/Saver.hpp"
+#include "./core/matrix.hpp"
+#include "./core/omega.hpp"
+#include "./core/vector.hpp"
+#include "./core/interpolator.hpp"
+#include "./core/saver.hpp"
 
 #include "./structured/rectgrid.hpp"
 

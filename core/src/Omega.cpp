@@ -1,11 +1,11 @@
 #include <iostream>
-#include "../Omega.hpp"
+#include "../omega.hpp"
 
 using namespace std;
 /**
  * @brief Get class name.
- * 
- * @return const char* 
+ *
+ * @return const char*
  */
 const char *Omega::getName() {
     return "Omega";
@@ -13,9 +13,9 @@ const char *Omega::getName() {
 
 /**
  * @brief Construct a new Omega:: Omega object
- * 
- * @param rho 
- * @param c 
+ *
+ * @param rho
+ * @param c
  */
 Omega::Omega(double rho, double c) {
     this->rho = rho;
@@ -24,8 +24,8 @@ Omega::Omega(double rho, double c) {
 
 /**
  * @brief Calculate OmegaX
- * 
- * @return Matrix 
+ *
+ * @return Matrix
  */
 Matrix Omega::OmegaX() {
     this->initValues(0);
@@ -41,8 +41,8 @@ Matrix Omega::OmegaX() {
 
 /**
  * @brief Calculate OmegaY
- * 
- * @return Matrix 
+ *
+ * @return Matrix
  */
 Matrix Omega::OmegaY() {
     this->initValues(0);
@@ -58,8 +58,8 @@ Matrix Omega::OmegaY() {
 
 /**
  * @brief Inverse OmegaY matrix.
- * 
- * @return Matrix 
+ *
+ * @return Matrix
  */
 Matrix Omega::OmegaY_Inv() {
     this->initValues(0);
@@ -75,8 +75,8 @@ Matrix Omega::OmegaY_Inv() {
 
 /**
  * @brief Inverse OmegaX matrix.
- * 
- * @return Matrix 
+ *
+ * @return Matrix
  */
 Matrix Omega::OmegaX_Inv() {
     this->initValues(0);
