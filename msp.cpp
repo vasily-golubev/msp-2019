@@ -2,6 +2,7 @@
 
 #include "./core/basesaver.hpp"
 #include "./core/Matrix.hpp"
+#include "./core/Omega.hpp"
 #include "./core/Vector.hpp"
 #include "./core/Interpolator.hpp"
 #include "./core/Saver.hpp"

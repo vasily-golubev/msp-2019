@@ -1,8 +1,12 @@
-#include "../matrix.hpp"
+#include "../Matrix.hpp"
 #include <iostream>
 using namespace std;
 
-
+/**
+ * @brief Get class name.
+ * 
+ * @return const char* 
+ */
 const char *Matrix::getName() {
   return "Matrix";
 }
@@ -66,3 +70,55 @@ Matrix Matrix::operator+ (const Matrix& m2) const {
                           m2.data[i][j];
   return mSum;
 }
+
+/**
+ * @brief Overload the << operator to display the matrix
+ * 
+ * @param os 
+ * @param m Matrix
+ * @return ostream& 
+ */
+ostream& operator<<(ostream &os, const Matrix& m) {
+  for (int i = 0; i < MAXLEN; i++){
+    for (int j = 0; j < MAXLEN; j++)
+      os << m.data[i][j] << " ";
+    os << endl;
+  }
+  return os;
+}
+
+/**
+ * @brief Overload the * operator, matrix multiplicatin.
+ * 
+ * @param m2 
+ * @return Matrix 
+ */
+Matrix Matrix::operator*(const Matrix &m2) const {
+  Matrix m;
+
+  for (int k=0; k<MAXLEN; k++)
+    for (int i=0; i<MAXLEN; i++)
+      for (int j=0; j<MAXLEN; j++) 
+        m.data[k][i] += this->data[k][j] * m2.data[j][i];
+
+  return m;
+}
+
+/**
+ * @brief Overload the * operator, matrix by vector.
+ * 
+ * @param v1 
+ * @return Vector 
+ */
+Vector Matrix::operator*(const Vector &v1) const {
+  Vector v;
+
+  for (int k = 0; k < MAXLEN; k++)
+    for (int j = 0; j < MAXLEN; j++)
+      v.data[k] += this->data[k][j] * v1.data[j];
+
+  return v;
+}
+
+
+
