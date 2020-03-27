@@ -46,8 +46,7 @@ public:
   void setNy(unsigned long n) { ny = n; }
   void setDx(float x) { dx = x; }
   void setDy(float y) { dy = y; }
-  float getPressure(int i, int j) {return data[i][j].pressure();}
-  void setPressure(int i, int j, float p) { data[i][j].setPressure(p); }
+  AcousticNode& getAcousticNode(int i, int j) { return data[i][j]; }
 private:
   float dx;
   float dy;

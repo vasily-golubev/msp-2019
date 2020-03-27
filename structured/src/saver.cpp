@@ -25,7 +25,7 @@ void Saver::save(RectGrid& grid)
     {
         for (int j = 0; j < grid.getNy(); j++)
         {
-            out << grid.getPressure(i, j) << ' ';
+            out << grid.getAcousticNode(i, j).pressure() << ' ';
         }
         out << endl;
     }

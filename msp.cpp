@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
   rg1.allocateMemory();
   for(int i = 0; i < rg1.getNy(); i++){
       for(int j = 0; j < rg1.getNx(); j++){
-          rg1.setPressure(i, j, (500-i)*(500-j) );
+          rg1.getAcousticNode(i, j).setPressure((500-i)*(500-j));
       }
   }
   Saver saver_rg;
