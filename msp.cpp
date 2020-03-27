@@ -8,6 +8,7 @@
 
 #include "./structured/saver.hpp"
 #include "./structured/rectgrid.hpp"
+#include "./structured/initial.hpp"
 
 using namespace std;
 
@@ -47,6 +48,7 @@ int main(int argc, char *argv[])
           rg1.getAcousticNode(i, j).setPressure((500-i)*(500-j));
       }
   }
+  Initial::init(rg1, 500, 500, 300, 200000.0);
   Saver saver_rg;
   saver_rg.save(rg1);
 
