@@ -6,11 +6,16 @@ const char *Saver::getName() {
 }
 
 
-void Saver::save(RectGrid& grid)
+void Saver::save(RectGrid& grid, int number)
 {
+    if(number % period != 0){
+        return;
+    }
+
     ofstream out;
     cout << "Saving results ..." << endl;
-    out.open("output.vtk");
+    string fileName = grid.getName() + numberToString(number) + ".vtk";
+    out.open(fileName.c_str());
     out << "# vtk DataFile Version 3.0" << endl;
     out << "Created by Saver::save()" << endl;
     out << "ASCII" << endl;
@@ -33,4 +38,13 @@ void Saver::save(RectGrid& grid)
     out << "INFORMATION 0" << endl;
     out.close();
     cout << "Successfully" << endl;
+}
+
+string Saver::numberToString(int x){
+    string str = "";
+    for(int i = 0; i < 6; i++){
+        str = char((x % 10) + '0') + str;
+        x /= 10;
+    }
+    return str;
 }

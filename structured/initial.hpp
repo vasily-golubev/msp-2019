@@ -10,6 +10,9 @@ class Initial : public BaseObject
 {
   public:
     static void init(RectGrid& grid, unsigned long x0, unsigned long y0, unsigned long radius, float pressure){
+        if(radius == 0){
+            return;
+        }
         unsigned long Nx = grid.getNx();
         unsigned long Ny = grid.getNy();
         int dx = grid.getDx();
