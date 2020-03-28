@@ -21,9 +21,9 @@ void Saver::save(RectGrid& grid)
     out << "POINT_DATA " << grid.getNx() * grid.getNy() << endl;
     out << "SCALARS p float" << endl;
     out << "LOOKUP_TABLE p_table" << endl;
-    for (int i = 0; i < grid.getNx(); i++)
+    for (int j = 0; j < grid.getNy(); j++)
     {
-        for (int j = 0; j < grid.getNy(); j++)
+        for (int i = 0; i < grid.getNx(); i++)
         {
             out << grid.getAcousticNode(i, j).pressure() << ' ';
         }

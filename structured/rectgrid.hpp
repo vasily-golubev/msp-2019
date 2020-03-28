@@ -16,15 +16,15 @@ public:
   }
   ~RectGrid() {
     if (data) {
-      for (int i = 0; i < ny; i++)
+      for (int i = 0; i < nx; i++)
         delete [] data[i];
       delete [] data;
     }
   }
   void allocateMemory() {
-    data = new AcousticNode*[ny];
-    for (int i = 0; i < ny; i++)
-      data[i] = new AcousticNode[nx];
+    data = new AcousticNode*[nx];
+    for (int i = 0; i < nx; i++)
+      data[i] = new AcousticNode[ny];
   }
   const char *getName();
   float getDx() const { return dx; }
@@ -34,8 +34,8 @@ public:
   unsigned long getOx() const { return ox; }
   unsigned long getOy() const { return oy; }
   void stepX() {
-    for (int i = 0; i < ny; i++) {
-      for (int j = 0; j < nx; j++)
+    for (int i = 0; i < nx; i++) {
+      for (int j = 0; j < ny; j++)
         // Call scheme with appropriate nodes here.
         cout << data[i][j].pressure() << " ";
       cout << endl;

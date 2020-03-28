@@ -39,16 +39,17 @@ int main(int argc, char *argv[])
   // SAVING TEST
   RectGrid rg1;
   rg1.setNx(1000);
-  rg1.setNy(1000);
+  rg1.setNy(1200);
   rg1.setDx(1);
   rg1.setDy(1);
   rg1.allocateMemory();
-  for(int i = 0; i < rg1.getNy(); i++){
-      for(int j = 0; j < rg1.getNx(); j++){
-          rg1.getAcousticNode(i, j).setPressure((500-i)*(500-j));
+  for(int i = 0; i < rg1.getNx(); i++){
+      for(int j = 0; j < rg1.getNy(); j++){
+          rg1.getAcousticNode(i, j).setPressure(i*j);
       }
   }
-  Initial::init(rg1, 500, 500, 300, 200000.0);
+  Initial::init(rg1, 500, 500, 400, 1500000);
+  Initial::init(rg1, 100, 100, 200, 700000);
   Saver saver_rg;
   saver_rg.save(rg1);
 
