@@ -5,6 +5,7 @@
 #include "./core/omega.hpp"
 #include "./core/vector.hpp"
 #include "./core/interpolator.hpp"
+#include "./core/solver.hpp"
 
 #include "./structured/saver.hpp"
 #include "./structured/rectgrid.hpp"
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
   }
   cout << "This program calculates wave propagation in acoustic media." << endl;
   // Config cfg(argv[1]);
-  // Solver solver(cfg);
+  
   // Saver saver(cfg);
 
   // SAVING TEST
@@ -30,6 +31,8 @@ int main(int argc, char *argv[])
   rg1.setDx(1);
   rg1.setDy(1);
   rg1.allocateMemory();
+
+
   for(int i = 0; i < rg1.getNx(); i++){
       for(int j = 0; j < rg1.getNy(); j++){
           rg1.getAcousticNode(i, j).setPressure(i*j);
@@ -37,6 +40,7 @@ int main(int argc, char *argv[])
   }
 
   Saver saver_rg(2);
+  Solver solver(rg1);
 
   unsigned long steps = 101; // Bring from cfg like stoul(cfg.get("steps"));
   for (unsigned long i = 0; i < steps; i++) {
@@ -46,7 +50,7 @@ int main(int argc, char *argv[])
     Initial::init(rg1, 50, 50, i, 15000);
     saver_rg.save(rg1, i);
 
-    //solver->step();
+    solver.step();
   }
   Interpolator s1;
   cout << s1.linear(10, 20, 15, 40, 80) << endl;
