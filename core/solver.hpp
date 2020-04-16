@@ -10,7 +10,7 @@ using namespace std;
 class Solver: public BaseObject
 {
     private:
-        RectGrid grid;
+        RectGrid &grid;
     public:
         Solver(RectGrid &rg);
         void step();

@@ -2,8 +2,8 @@
 
 using namespace std;
 
-Solver::Solver(RectGrid &rg) {
-    this->grid = rg;
+Solver::Solver(RectGrid &rg) : grid(rg) {
+    //this->grid = rg; // Impossible!
 };
 
 void Solver::stepX() {
