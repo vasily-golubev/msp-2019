@@ -33,15 +33,15 @@ public:
   unsigned long getNy() const { return ny; }
   unsigned long getOx() const { return ox; }
   unsigned long getOy() const { return oy; }
-  void stepX() {
-    for (int i = 0; i < nx; i++) {
-      for (int j = 0; j < ny; j++)
-        // Call scheme with appropriate nodes here.
-        cout << data[i][j].pressure() << " ";
-      cout << endl;
-    }
-  }
-  void stepY() {}
+  // void stepX() {
+  //   for (int i = 0; i < nx; i++) {
+  //     for (int j = 0; j < ny; j++)
+  //       // Call scheme with appropriate nodes here.
+  //       cout << data[i][j].pressure() << " ";
+  //     cout << endl;
+  //   }
+  // }
+  // void stepY() {}
   void setNx(unsigned long n) { nx = n; }
   void setNy(unsigned long n) { ny = n; }
   void setDx(float x) { dx = x; }

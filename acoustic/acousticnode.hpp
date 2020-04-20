@@ -8,19 +8,26 @@ class AcousticNode : public BaseObject
   public:
     AcousticNode()
     {
-        p = 0;
+      this->u = Vector();
+      // todo: rewrite the init values
+      this->u.initValues(2);
+    }
+    double setPressure(double p) {
+      return p;
+    }
+    double pressure() {
+      return 1;
+    }
+    
+    Vector& getVector() {
+      return this->u;
     }
     ~AcousticNode() {}
     const char *getName();
-    float pressure() {
-      return p;
-    }
-    void setPressure(float p){
-        this->p = p;
-    }
   private:
-    Vector v;
-    float p;
+    Vector u;
+
+
 };
 
 #endif // ACOUSTIC_NODE
