@@ -46,6 +46,8 @@ public:
   void setNy(unsigned long n) { ny = n; }
   void setDx(float x) { dx = x; }
   void setDy(float y) { dy = y; }
+  void setOx(float x) { ox = x; }
+  void setOy(float y) { oy = y; }
   AcousticNode& getAcousticNode(int i, int j) { return data[i][j]; }
 private:
   float dx;
