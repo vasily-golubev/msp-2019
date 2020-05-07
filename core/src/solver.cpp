@@ -21,9 +21,9 @@ void Solver::stepX() {
 		Vector u = n.getVector();
                 Vector u_1 = n_1.getVector();
 		Vector u1 = n1.getVector();
-		Vector w_1 =u_1 * Omega(rho,c).OmegaX_Inv(); 
-		Vector w =u * Omega(rho,c).OmegaX_Inv();
-		Vector w1 =u1 * Omega(rho,c).OmegaX_Inv();
+		Vector w_1 = Omega(rho,c).OmegaX_Inv() * u_1; 
+		Vector w = Omega(rho,c).OmegaX_Inv() * u;
+		Vector w1 = Omega(rho,c).OmegaX_Inv() * u1;
             }
         }
     }
@@ -45,9 +45,9 @@ void Solver::stepY() {
 		Vector u = n.getVector();
                 Vector u_1 = n_1.getVector();
 		Vector u1 = n1.getVector();
-		Vector w_1 =u_1 * Omega(rho,c).OmegaY_Inv(); 
-		Vector w =u * Omega(rho,c).OmegaY_Inv();
-		Vector w1 =u1 * Omega(rho,c).OmegaY_Inv();
+		Vector w_1 = Omega(rho,c).OmegaY_Inv() * u_1; 
+		Vector w = Omega(rho,c).OmegaY_Inv() * u;
+		Vector w1 = Omega(rho,c).OmegaY_Inv() * u1;
             }
         }
     }
